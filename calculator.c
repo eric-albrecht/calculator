@@ -3,7 +3,13 @@
 #include "operators.h"
 #include "calculator.h"
 
+/**
 
+Purpose: reads in a number, validates it is an integer, and returns a new value.
+
+char* printMessage - the message to be printed out when querying a number.
+
+**/
 int readNumber(char* printMessage) {
 	printf("%s\n", printMessage);
 	int number;
@@ -11,11 +17,22 @@ int readNumber(char* printMessage) {
 	return number;
 }
 
+/**
+
+Purpose: reads in the operand, validates it, and places it in the operandStorage.
+
+char* printMessage - message to be printed when querying operand
+char* operandStorage - place to store valid operand to be used in other methods.
+
+**/
 void readOperand(char* printMessage, char* operandStorage) {
 	printf("%s\n", printMessage);
 	scanf("%s", operandStorage);
 }
 
+/**
+Purpose: run entire calculator operation. Find two numbers, operation, and calculate them.
+**/
 void calculator() {
 	char operand[1];
 	int result;
